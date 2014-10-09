@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/putName"
+        android:layout_centerHorizontal="true"
+        android:text="Company:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="55sp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Price:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="55sp" />
+
+    <EditText
+        android:id="@+id/putName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/price"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/putPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/putName"
+        android:layout_below="@+id/price"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignRight="@+id/price"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="66dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/getQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/companyName"
+        android:layout_alignBottom="@+id/companyName"
+        android:layout_alignRight="@+id/name"
+        android:text="Get Quote" />
+
+</RelativeLayout>
